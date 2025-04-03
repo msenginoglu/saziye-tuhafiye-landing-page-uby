@@ -920,3 +920,438 @@ ul {
     transform: translateY(0) translateX(0);
   }
 }
+
+.products-description {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(138, 79, 125, 0.08),
+    rgba(42, 157, 143, 0.08)
+  );
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.products-description p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: center;
+}
+
+.products-description strong {
+  color: #333;
+  font-weight: 600;
+} /* Ürünler Bölümü Stilleri */
+.products-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(42, 157, 143, 0.08),
+    rgba(138, 79, 125, 0.08)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-products {
+  margin-bottom: 3rem;
+}
+
+.featured-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.featured-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #2a9d8f, #8a4f7d);
+  border-radius: 3px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border-bottom: 5px solid #2a9d8f;
+}
+
+.product-card:nth-child(even) {
+  border-bottom: 5px solid #8a4f7d;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-badge {
+  position: absolute;
+  top: 25px;
+  right: -50px;
+  background: linear-gradient(135deg, #8a4f7d, #2a9d8f);
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(45deg);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 1.5rem;
+  position: relative;
+  background: linear-gradient(to bottom, #fff, rgba(138, 79, 125, 0.05));
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.product-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, #2a9d8f, #8a4f7d);
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8a4f7d;
+  margin-bottom: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.product-price::before {
+  content: "✦";
+  margin-right: 5px;
+  color: #2a9d8f;
+  font-size: 1rem;
+}
+
+.product-price::after {
+  content: "✦";
+  margin-left: 5px;
+  color: #2a9d8f;
+  font-size: 1rem;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-section {
+    padding: 4rem 0;
+  }
+
+  .featured-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .products-section {
+    padding: 3rem 0;
+  }
+
+  .featured-title {
+    font-size: 1.4rem;
+  }
+
+  .product-badge {
+    right: -40px;
+    top: 15px;
+    padding: 0.3rem 0;
+    font-size: 0.55rem;
+    width: 130px;
+  }
+
+  .products-description p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+}
+
+/* Müşteri Yorumları Bölümü - Yumuşak geçişli ve bulanıklaşma sorunu giderilmiş */
+.testimonials-section {
+  padding: 5rem 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-description {
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-description p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(
+    135deg,
+    rgba(138, 79, 125, 0.03),
+    rgba(42, 157, 143, 0.03)
+  );
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, #8a4f7d, #2a9d8f);
+  border-image-slice: 1;
+
+  /* Bulanıklaşmayı önleyen özellikler */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) translateZ(0);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-content {
+  padding: 2rem;
+}
+
+.quote-icon {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-text::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(138, 79, 125, 0.05);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.author-title {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.testimonial-rating {
+  color: #f7d046;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.star {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.testimonial-card:hover .star {
+  animation: star-pulse 1.5s ease infinite;
+}
+
+@keyframes star-pulse {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  50% {
+    transform: scale(1.2) translateZ(0);
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+  }
+}
+
+/* Testimonials Responsive Stilleri */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 4rem 0;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonials-section {
+    padding: 3rem 0;
+  }
+
+  .testimonial-card {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .testimonial-rating {
+    margin-top: 1rem;
+  }
+}
