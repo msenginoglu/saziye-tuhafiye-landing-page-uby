@@ -1,3 +1,4 @@
+// Ana JS Dosyası
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile Menu Elements
   const hamburger = document.querySelector(".hamburger");
