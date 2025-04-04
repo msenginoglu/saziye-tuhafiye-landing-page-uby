@@ -68,7 +68,7 @@ Bu proje, Üçüncü Binyıl Akademi front-end eğitmeni Muhammet Şükrü ENGİ
 - Furkan DÜNDAR
 - Muhammed KRANDA
 - Samet TAŞKIN
-- Yiğit Kaan TOPÇU
+- Yiğit Kaan TOPCU
 - Yusuf Buğra METİN
 
 ---
